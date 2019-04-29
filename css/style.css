@@ -1,0 +1,62 @@
+@charset "utf-8";
+/*font-family: 'Montserrat', sans-serif;*/
+body, html {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+/*header */
+.header{
+	background-color: #3498DB;
+	height: 70px;
+	line-higth : 70px;
+}
+.logo {
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	float: left;
+}
+.menu {
+	float: right;
+}
+
+.menu a {
+	color: #ffffff;
+	margin-right: 20px;
+}
+.menu a:hover {
+
+}
+
+/* banniere */
+.banner {
+	width: 100%;
+	max-width: 100%;
+
+}
+.ban {
+	float: left;
+}
+
+.ban img {
+	width: 40%;
+	max-width: 40%; 
+	float: left;
+}
+
+
+
+/*contact*/
+.footer{
+display: inline-block;
+
+}
+
