@@ -44,11 +44,12 @@ a, a:hover {
 }
 .ban {
 	float: left;
+	width:50%;
 }
 
 .ban img {
-	width: 40%;
-	max-width: 40%; 
+	width: 100%;
+	max-width: 100%; 
 	float: left;
 }
 
@@ -56,7 +57,13 @@ a, a:hover {
 
 /*contact*/
 .footer{
+width: 50%;
 display: inline-block;
+margin-top:-50px;
 
 }
 
+.test {
+	margin-top:10px;
+	float: left;
+}
