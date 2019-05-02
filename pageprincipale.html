@@ -1,38 +1,118 @@
-<!DOCTYPE html>
-<html>
 <head>
-	<meta charset="utf-8">
-	<title>Ece Amazone</title>
-	
-	
-	<!-- java scrip -->
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	
-	<!-- font -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	
-	<!--css-->
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<link rel="stylesheet"  href="css/bootstrap.min.css">
-	<link rel="stylesheet"  href="css/style.css">
+  <title>Ece Amazone</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    
+a, a:hover {
+    text-decoration: none;
+}
+/*header */
+.header{
+    background-color: #3498DB;
+    height: 70px;
+    line-higth : 70px;
+}
+.logo {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    float: left;
+}
+.menu {
+    float: right;
+}
+
+.menu a {
+    color: #ffffff;
+    margin-right: 20px;
+}
+.menu a:hover {
+
+}
+
+/* banniere */
+.banner {
+    width: 100%;
+    max-width: 100%;
+
+}
+.ban {
+    float: left;
+}
+
+.ban img {
+    width: 40%;
+    max-width: 40%; 
+    float: left;
+}
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 120%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+    /*Carousel des vente flash */
+
+.carousel-inner img {
+      width: 70%; /* Set width to 100% */
+      margin: auto;
+      max-height:600px;
+  }
+
+ /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 400px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+
+/* fin Carousel des vente flash */
+
+  </style>
 </head>
-
-<!-- contenue du site -->
-
 <body>
 
-	<!--header -->
-<header class="container-fluid header"> 
-	<div class="container"> 
-		<a href="#" class="logo">Ece Amazone</a>
-		<nav class="menu">
-			<a href="#about">A propos</a>
-			<a href="#contact">contact</a>
-		</nav>
-	</div>
-</header>
-<!--end header -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-left">
+        <a>Ece Amazone</a>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!--baniere -->
 <section class="container-fluid banner"> 
@@ -149,5 +229,12 @@
 <!-- end se connecter -->
 
 </table>
+
+<!--footer-->
+<footer class="container-fluid text-center">
+  <p> <center> Contactez-moi ! <a href="https://www.facebook.com/theo.chanashing"> Facebook </a> ou <a href="https://www.instagram.com/theo_chanashing/?hl=fr"> Instagram </a> </center> </p>
+        <p>  <center> <a href="https://www.facebook.com/theo.chanashing">  <img src="img/facebook.png"style="width:3%">   </a>  or/and  <a href="https://www.instagram.com/theo_chanashing/?hl=fr"> <img src="img/instagram.png" style="width:3%"> </a> </center> </p>
+</footer>
+<!-- fin footer -->
 </body>
 </html>
