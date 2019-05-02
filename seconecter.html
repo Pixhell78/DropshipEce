@@ -1,64 +1,62 @@
-<!DOCTYPE html>
-<html>
 <head>
-	<meta charset="utf-8">
-	<title>Ece Amazone</title>
-	
-	<!-- java scrip -->
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	
-	<!-- font -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	
-	<!--css-->
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<link rel="stylesheet"  href="css/bootstrap.min.css">
-	<link rel="stylesheet"  href="css/style.css">
+  <title>Ece Amazone</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+
+  </style>
 </head>
 
-<body> 
+<body>
 
-<!--header -->
-<header class="container-fluid header"> 
-	<div class="container"> 
-		<a href="#" class="logo">Ece Amazone</a>
-		<nav class="menu">
-			<a href="#about">A propos</a>
-			<a href="#contact">contact</a>
-		</nav>
-	</div>
-</header>
-<!--end header -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-left">
+        <a>Ece Amazone</a>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!--formulaire se connecter -->
-<form action = "connect.php" method="post" style="width:50%; display: flex;flex-direction: 	column; justify-content: center; align-content: center;	">
-
-	<div class="form-group">
-  	   <label for="email" class="col-md-3 control-label">Email</label>
-        	<div class="col-md-9">
-            	 <input type="text" class="form-control" id="email" name="email" placeholder="Adresse email" required>
-       		</div>
- 	</div>
+<div class="form-group">
+     <label for="email" class="col-md-3 control-label">Email</label>
+        <div class="col-md-9">
+             <input type="text" class="form-control" id="email" name="email" placeholder="Adresse email" required>
+         </div>
+ </div>
                                     
      <div class="form-group">
-       	 	<label for="register_password" class="col-md-3 control-label">Mot de passe</label>
-        		<div class="col-md-9">
-       			 <input type="password" id="register_password" data-minlength="8" class="form-control" name="password" placeholder="mot de passe" required>
-                </div>
-     </div>
-
-
-    <div class="form-group" >
-         <!-- Boutton -->                                        
+         <label for="register_password" class="col-md-3 control-label">Mot de passe</label>
+        <div class="col-md-9">
+        <input type="password" id="register_password" data-minlength="8" class="form-control" name="password" placeholder="mot de passe" required>
+               
+                                    
+        </div>
+        <div class="form-group" >
+         <!-- Boutton se connecter -->                                        
          <div class="col-md-offset-3 col-md-9" style=" margin-top:20px;">
-            <input id="btn-signin" type="submit" class="btn btn-info col-md-12" value ="Se connecter" ><i class="icon-hand-right"></i>
-                            
+            <a href="pagedacceuil.html" >
+            <button id="btn-signin" type="button" class="btn btn-info col-md-12"><i class="icon-hand-right"></i> &nbsp Se connecter</button></a>
+                                        
          </div>
-    </div>
 
- </form>
 <!-- fin formulaire se connecter -->
+
 </body>
 
 
