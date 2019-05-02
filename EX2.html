@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Informations Personnelles</title>
+<meta charset="utf-8">
+</head>
+<body>
+	<h2>Informations Personnelles</h2>
+
+		<h4>Etat Civil</h4>
+	<form action="ex2.php" method="post">
+		<table>
+<td>Civilité</td>
+			<td>
+
+                        <select name="Civilite">
+                            <option value="M.">M.</option>
+                            <option value="Mme">Mme</option>
+                            <option value="Mrs">Mrs</option>
+                        </select>
+            </td>
+            <tr>
+				<td>Nom:</td>
+				<td><input type="text" name="Nom"></td>
+			</tr>
+
+			<tr>
+			<td>Prenom:</td>
+				<td><input type="text" name="Prenom"></td>
+			</tr>
+			
+			<tr>
+				<td>Date De Naissance:</td>
+			<td><input type="date" name="Datenaissance"></td>
+			</tr>
+			<td>Commune de Naissance</td>
+			<tr>
+				<td><select name="Communenaissance">
+					<option value="Ardenne">Ardenne</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Marseille">Marseille</option>
+                  </select></td>
+			</tr>
+		</table>
+	</form>
+<table>
+	<form>
+	<h4>Coordonées</h4>
+			<tr>
+				<td>Télephone:</td>
+				<td><input type="text" name="tel"></td>
+			</tr>
+			<tr>
+				<td>Courriel:</td>
+				<td><input type="text" name="Courriel"></td>
+			</tr>
+			<tr>
+				<td>Site Web:</td>
+				<td><input type="text" name="siteWeb"></td>
+			</tr>
+
+	</form>
+</table>
+
+<table>
+	<form>
+	<h4>Competence</h4>
+			<tr>
+				<td>Niveau Anglais:</td>
+				<td><input type="text" name="niveaulangue"></td>
+			</tr>
+			<tr>
+				<td>Langages Informatiques:</td>
+				<td><input type="text" name="languagesinfo"></td>
+			</tr>
+	</form>
+</table>
+
+			<tr>
+				<td colspan="2" align="center">
+			 	<input type="submit" name="button5" value="Envoyer"></td>
+			 	<td colspan="2" align="center">
+			 	<input type="submit" name="button" value="Effacer"></td>
+			</tr>
+
+
+</body>
+</html>
