@@ -34,7 +34,7 @@
 										session_start();
 										$_SESSION['id'] = $data['id'];
 										$_SESSION['prenom'] = $data['prenom'];
-									echo '<meta http-equiv="refresh" content="1; URL=pagedacceuil.html">';
+									echo '<meta http-equiv="refresh" content="1; URL=pagedacceuil.php">';
 		
 														    }
 				}
@@ -66,7 +66,7 @@
 										session_start();
 										$_SESSION['id'] = $data['id'];
 										$_SESSION['prenom'] = $data['prenom'];
-									echo '<meta http-equiv="refresh" content="1; URL=pagedacceuil.html">';
+									echo '<meta http-equiv="refresh" content="1; URL=pagedacceuil.php">';
 
 								}
 
@@ -99,7 +99,7 @@
 										session_start();
 										$_SESSION['id'] = $data['id'];
 										$_SESSION['prenom'] = $data['prenom'];
-							echo '<meta http-equiv="refresh" content="1; URL=pagedacceuil.html">';
+							echo '<meta http-equiv="refresh" content="1; URL=pagedacceuil.php">';
 							}
 
 				}
