@@ -104,7 +104,8 @@
       <p>Faite vous plaisir !</p>
       <hr>
       
-      <!-- ici carré avec vetement -->
+          <div class="container">    
+  <div class="row">  <!-- ici carré avec vetement -->
       
       <!--php-->
       <?php
@@ -117,20 +118,53 @@
     
   
   if($db_found){
-    $sql = "SELECT * FROM musique WHERE genre='zouk' AND id=1" ;
-    $result = mysqli_query($db_handle,$sql);
-    while ($data = mysqli_fetch_assoc($result))
-    {
-       $image = $data['photo'];
-       $titre = $data['nom'];
-       $auteur = $data['auteur'];
-       $datesortie = $data['datesortie'];
-       $prix = $data['prix'];
-    }
-  }
-  else{
-    echo "Database not found";
-  }
+ 
+        $sql_count = mysqli_query($db_handle,"SELECT COUNT(*) AS titre FROM musique WHERE genre='zouk'") or exit(mysql_error());
+      $donnees = mysqli_fetch_array($sql_count);
+      $num = $donnees['titre'];
+ 
+     
+    for($i=1;$i<=$num;$i++) {
+      
+        $sql = "SELECT * FROM musique WHERE genre='zouk' AND id=$i" ;
+        $result = mysqli_query($db_handle,$sql);
+        while ($data = mysqli_fetch_assoc($result))
+            {
+               $image = $data['photo'];
+               $titre = $data['nom'];
+               $auteur = $data['auteur'];
+               $datesortie = $data['datesortie'];
+               $prix = $data['prix'];
+            }
+            echo' <div class="col-sm-4">
+          
+            <div class="panel-heading">Dernier hit</div>
+            <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
+            
+            <!--prix etc-->
+            <div class="panel panel-default text-center">
+            <p class="h4" style="font-weight: bold;">'.$titre.'</p>
+            <p><input type="text" class="form-control" id="auteur" value="Auteur : '.$auteur.'"readonly> </p>
+            <p><input type="text" class="form-control" id="datesortie" value="Date de sortie : '.$datesortie.'"readonly> </p>
+            <p><input type="text" class="form-control" id="Prix" value="Prix : '.$prix.' euros"readonly></p>
+            <a href="pannier.html"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier </a>
+            </div>
+          <!--fin prix etc-->
+
+          
+        </div>';
+
+
+
+
+            }
+
+         }
+          else{
+            echo "Database not found";
+          }    
+    
+
 
 
 
@@ -140,76 +174,17 @@
  
       <!--finphp-->
       
-      <div class="container">    
-  <div class="row">
-    <div class="col-sm-4">
-      
-        <div class="panel-heading">Dernier hit</div>
-        <div class="panel-body"><img src="<?php echo $image ?>" class="img-responsive" style="width:100%" alt="Image"></div>
-        
-        <!--prix etc-->
-        <div class="panel panel-default text-center">
-        <p class="h4" style="font-weight: bold;"><?php echo $titre;?></p>
-        <p><input type="text" class="form-control" id="auteur" value="Auteur : <?php echo $auteur;?>"readonly> </p>
-        <p><input type="text" class="form-control" id="datesortie" value="Date de sortie : <?php echo $datesortie;?>"readonly> </p>
-        <p><input type="text" class="form-control" id="Prix" value="Prix : <?php echo $prix;?> euros"readonly></p>
-        <a href="pannier.html"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier </a>
-        </div>
-      <!--fin prix etc-->
 
-      
-    </div>
-      <!--fin prix etc-->
-            <?php
-  $database1 ="projet";
-  $db_handle1 = mysqli_connect(DB_SERVER,DB_USER,DB_PASS);
-  $db_found1 = mysqli_select_db($db_handle1, $database1);
-    
-  
-  if($db_found){
-    $sql1 = "SELECT * FROM musique WHERE genre='zouk' AND id=2" ;
-    $result1 = mysqli_query($db_handle1,$sql1);
-    while ($data1 = mysqli_fetch_assoc($result1))
-    {
-       $image1 = $data1['photo'];
-       $titre1 = $data1['nom'];
-       $auteur1 = $data1['auteur'];
-       $datesortie1 = $data1['datesortie'];
-       $prix1 = $data1['prix'];
-    }
-  }
-  else{
-    echo "Database not found";
-  }
+          <!--ici-->
 
+               <!--fin prix etc-->
 
-
-  mysqli_close($db_handle1);
-  ?>
-
-    <div class="col-sm-4">
-      
-        <div class="panel-heading">Dernier hit</div>
-        <div class="panel-body"><img src="<?php echo $image1 ?>" class="img-responsive" style="width:100%" alt="Image"></div>
-        
-        <!--prix etc-->
-        <div class="panel panel-default text-center">
-        <p class="h4" style="font-weight: bold;"><?php echo $titre1;?></p>
-        <p><input type="text" class="form-control" id="auteur" value="Auteur : <?php echo $auteur1;?>"readonly> </p>
-        <p><input type="text" class="form-control" id="datesortie" value="Date de sortie : <?php echo $datesortie1;?>"readonly> </p>
-        <p><input type="text" class="form-control" id="Prix" value="Prix : <?php echo $prix1;?> euros"readonly></p>
-        <a href="pannier.html"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier </a>
-        </div>
-
-  </div>
   </div>
 </div>
 <!--fin carré vetement-->
     </div>
       </div>
     </div>
-  </div>
-</div>
 
 <footer class="container-fluid text-center">
   <p> <center> Contactez-moi ! <a href="https://www.facebook.com/theo.chanashing"> Facebook </a> ou <a href="https://www.instagram.com/theo_chanashing/?hl=fr"> Instagram </a> </center> </p>
