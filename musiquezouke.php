@@ -117,25 +117,27 @@
     
   
   if($db_found){
-    $sql = "SELECT * FROM musique WHERE genre='zouk' " ;
+    $sql = "SELECT * FROM musique WHERE genre='zouk' AND id=1" ;
     $result = mysqli_query($db_handle,$sql);
-    while ($data = mysqli_fetch_assoc($result)){
-      echo "image ".$data['photo'].'<br>';
-      echo "Titre : ".$data['nom'].'<br>';
-      echo "Auteur: ".$data['auteur'].'<br>';
-      echo "Date de sortie : ".$data['datesortie'].'<br>';
-      echo "Prix : ".$data['prix'].'<br>';
+    while ($data = mysqli_fetch_assoc($result))
+    {
+       $image = $data['photo'];
+       $titre = $data['nom'];
+       $auteur = $data['auteur'];
+       $datesortie = $data['datesortie'];
+       $prix = $data['prix'];
+    }
   }
   else{
     echo "Database not found";
   }
-}
-else{
-    echo "Certains champs sont vide";
-}
+
+
+
   mysqli_close($db_handle);
   ?>
 
+ 
       <!--finphp-->
       
       <div class="container">    
@@ -143,32 +145,63 @@ else{
     <div class="col-sm-4">
       
         <div class="panel-heading">Dernier hit</div>
-        <div class="panel-body"><img src="<?php echo $photo ?>" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src="<?php echo $image ?>" class="img-responsive" style="width:100%" alt="Image"></div>
         
         <!--prix etc-->
         <div class="panel panel-default text-center">
-        <p><input type="text" class="form-control" id="auteur" value="<?php echo $auteur;?>"readonly> </p>
-        <p><input type="text" class="form-control" id="datesortie" value="<?php echo $datesortie;?>"readonly> </p>
-        <p><input type="text" class="form-control" id="Prix" value="<?php echo $prix;?>"readonly></p>
+        <p class="h4" style="font-weight: bold;"><?php echo $titre;?></p>
+        <p><input type="text" class="form-control" id="auteur" value="Auteur : <?php echo $auteur;?>"readonly> </p>
+        <p><input type="text" class="form-control" id="datesortie" value="Date de sortie : <?php echo $datesortie;?>"readonly> </p>
+        <p><input type="text" class="form-control" id="Prix" value="Prix : <?php echo $prix;?> euros"readonly></p>
         <a href="pannier.html"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier </a>
-</div>
+        </div>
       <!--fin prix etc-->
+
       
     </div>
-    <div class="col-sm-4"> 
+      <!--fin prix etc-->
+            <?php
+  $database1 ="projet";
+  $db_handle1 = mysqli_connect(DB_SERVER,DB_USER,DB_PASS);
+  $db_found1 = mysqli_select_db($db_handle1, $database1);
+    
+  
+  if($db_found){
+    $sql1 = "SELECT * FROM musique WHERE genre='zouk' AND id=2" ;
+    $result1 = mysqli_query($db_handle1,$sql1);
+    while ($data1 = mysqli_fetch_assoc($result1))
+    {
+       $image1 = $data1['photo'];
+       $titre1 = $data1['nom'];
+       $auteur1 = $data1['auteur'];
+       $datesortie1 = $data1['datesortie'];
+       $prix1 = $data1['prix'];
+    }
+  }
+  else{
+    echo "Database not found";
+  }
+
+
+
+  mysqli_close($db_handle1);
+  ?>
+
+    <div class="col-sm-4">
       
-        <div class="panel-heading">Franky Vincent</div>
-        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-heading">Dernier hit</div>
+        <div class="panel-body"><img src="<?php echo $image1 ?>" class="img-responsive" style="width:100%" alt="Image"></div>
         
         <!--prix etc-->
         <div class="panel panel-default text-center">
-        <p>Description:<input type="text" class="form-control" id="auteur" value="<?php echo $auteur;?>"readonly><br><input type="text" class="form-control" id="datesortie" value="<?php echo $datesortie;?>"readonly> </p>
-        <p>Prix:<input type="text" class="form-control" id="Prix" value="<?php echo $prix;?>"readonly></p>
+        <p class="h4" style="font-weight: bold;"><?php echo $titre1;?></p>
+        <p><input type="text" class="form-control" id="auteur" value="Auteur : <?php echo $auteur1;?>"readonly> </p>
+        <p><input type="text" class="form-control" id="datesortie" value="Date de sortie : <?php echo $datesortie1;?>"readonly> </p>
+        <p><input type="text" class="form-control" id="Prix" value="Prix : <?php echo $prix1;?> euros"readonly></p>
         <a href="pannier.html"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier </a>
-</div>
-      <!--fin prix etc-->
-      
-    </div>
+        </div>
+
+  </div>
   </div>
 </div>
 <!--fin carré vetement-->
