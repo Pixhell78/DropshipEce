@@ -131,7 +131,7 @@
         while ($data = mysqli_fetch_assoc($result))
             {
       $image = $data['photo'];
-      $titre = $data['nom'];
+      $titre = $data['titre'];
       $auteur = $data['auteur'];
       $date = $data['date'];
       $prix = $data['prix'];
@@ -158,7 +158,7 @@
       
     </div>';
             }
-         }
+         
           else{
             echo "Database not found";
           }    
