@@ -139,21 +139,21 @@
       $image = $data['photo'];
       $titre = $data['nom'];
       $video = $data['video'];
-      $marque = $marque['marque'];
+      $marque = $data['marque'];
       $prix = $data['prix'];
       $stock = $data['stock'];
       $description = $data['description'];
-}
+
   }
   
     echo ' <div class="col-sm-4">
       
         <div class="panel-heading">Vente flash</div>
-        <div class="panel-body"><img src="'.$image. '" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
         
         <!--prix etc-->
         <div class="panel panel-default text-center">
-        <p class="h4" style="font-weight: bold;">'.$titre.';</p>
+        <p class="h4" style="font-weight: bold;">'.$titre.'"</p>
         <p><input type="text" class="form-control" id="marque" value="Marque : '.$marque.'"readonly> </p>
         <p><input type="text" class="form-control" id="video" value="Regarde ça ! '.$video.'"readonly> </p>
         <p><input type="text" class="form-control" id="description" value="Description :  '.$description.'"readonly> </p>
@@ -164,7 +164,7 @@
       
     </div>';
             }
-         
+         }
           else{
             echo "Database not found";
           }    

@@ -160,7 +160,7 @@
           
         </div>';
             }
-         
+         }
           else{
             echo "Database not found";
           }    

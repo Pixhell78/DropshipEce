@@ -143,13 +143,13 @@
       $prix = $data['prix'];
       $editeur = $data['editeur'];
       $description = $data['description'];
-}
+
   }
   
     echo ' <div class="col-sm-4">
       
         <div class="panel-heading">Best seller</div>
-        <div class="panel-body"><img src="'.$image. '" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
         
         <!--prix etc-->
         <div class="panel panel-default text-center">
@@ -164,7 +164,7 @@
       
     </div>';
             }
-         
+         }
           else{
             echo "Database not found";
           }    
