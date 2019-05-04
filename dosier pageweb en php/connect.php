@@ -34,6 +34,8 @@
 										session_start();
 										$_SESSION['id'] = $data['id'];
 										$_SESSION['prenom'] = $data['prenom'];
+										$_SESSION['table'] = 'admin';
+
 									echo '<meta http-equiv="refresh" content="1; URL=pagedacceuil.php">';
 		
 														    }
@@ -66,6 +68,7 @@
 										session_start();
 										$_SESSION['id'] = $data['id'];
 										$_SESSION['prenom'] = $data['prenom'];
+										$_SESSION['table'] = 'acheteur';
 									echo '<meta http-equiv="refresh" content="1; URL=pagedacceuil.php">';
 
 								}
@@ -86,7 +89,6 @@
 		if ( $result ) 
 		{ 
 				$sql = mysqli_fetch_array($result);
-						echo $sql;
 
 				if($sql[0] == $password)
 				{
@@ -99,6 +101,8 @@
 										session_start();
 										$_SESSION['id'] = $data['id'];
 										$_SESSION['prenom'] = $data['prenom'];
+										$_SESSION['table'] = 'vendeur';
+
 							echo '<meta http-equiv="refresh" content="1; URL=pagedacceuil.php">';
 							}
 

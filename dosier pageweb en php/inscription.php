@@ -26,7 +26,6 @@
        $sql ="INSERT INTO acheteur (`id`, `id_carte`, `nom`,`prenom`, `password`, `image`, `mail`, `adresse`, `ville`, `cp`, `pays`, `tel`, `type`) VALUES (NULL,NULL, '".$nom."', '".$prenom."','$password', '$prenom','$mail','$adresse','$ville','$cp','$pays','$tel',NULL);";
 
     $result = mysqli_query($db_handle, $sql);
-    echo "Add successful." . "<br>";
     }
   else{
     echo "Database not found";
@@ -231,6 +230,7 @@ a, a:hover {
                         <div class="col-md-9">
                             <input type="text" class="form-control" maxlength="5" id="code_postal" name="cp" placeholder="Code postal" required>
                         </div>
+                      </div>
                         <div class="form-group">
                         <label for="phone" class="col-md-3 control-label">Téléphone</label>
                         <div class="col-md-9">
