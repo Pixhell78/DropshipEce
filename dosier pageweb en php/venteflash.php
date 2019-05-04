@@ -102,12 +102,9 @@
   
 <div class="container-fluid text-center">    
   <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p><a href="sportsport.php">Sport</a></p>
-      <p><a href="loisirloisir.php">Loisir</a></p>
-    </div>
+
     <div class="col-sm-8 text-left"> 
-      <h1>Sport et Loisir</h1>
+      <h1>Ventes flash</h1>
       <p>Faite vous plaisir !</p>
       <hr>
       
@@ -150,11 +147,11 @@
   
     echo ' <div class="col-sm-4">
       
-        <div class="panel-heading">Vente flash</div>
-        <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
         
         <!--prix etc-->
         <div class="panel panel-default text-center">
+
+        <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
         <p class="h4" style="font-weight: bold;">'.$titre.';</p>
         <p><input type="text" class="form-control" id="auteur" value="Auteur : '.$auteur.'"readonly> </p>
         <p><input type="text" class="form-control" id="editeur" value="Editeur : '.$editeur.'"readonly> </p>
@@ -204,11 +201,12 @@
             }
             echo' <div class="col-sm-4">
           
-            <div class="panel-heading">Dernier hit</div>
-            <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
+            
             
             <!--prix etc-->
+
             <div class="panel panel-default text-center">
+            <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
             <p class="h4" style="font-weight: bold;">'.$titre.'</p>
             <p><input type="text" class="form-control" id="auteur" value="Auteur : '.$auteur.'"readonly> </p>
             <p><input type="text" class="form-control" id="datesortie" value="Date de sortie : '.$datesortie.'"readonly> </p>
@@ -261,11 +259,11 @@
   
     echo ' <div class="col-sm-4">
       
-        <div class="panel-heading">Vente flash</div>
-        <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
+     
         
         <!--prix etc-->
         <div class="panel panel-default text-center">
+        <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
         <p class="h4" style="font-weight: bold;">'.$titre.'"</p>
         <p><input type="text" class="form-control" id="marque" value="Marque : '.$marque.'"readonly> </p>
         <p><input type="text" class="form-control" id="video" value="Regarde ça ! '.$video.'"readonly> </p>
@@ -321,11 +319,11 @@
   
     echo ' <div class="col-sm-4">
       
-        <div class="panel-heading">Vente flash</div>
-        <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
+        
         
         <!--prix etc-->
         <div class="panel panel-default text-center">
+        <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
         <p class="h4" style="font-weight: bold;">'.$marque.';</p>
         <p><input type="text" class="form-control" id="taille" value="Taille : '.$taille.'"readonly> </p>
         <p><input type="text" class="form-control" id="couleur" value="Couleur : '.$couleur.'"readonly> </p>

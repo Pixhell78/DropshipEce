@@ -104,7 +104,7 @@
   <div class="row content">
     <div class="col-sm-2 sidenav">
       <p><a href="livresciencefiction.php">Science fiction</a></p>
-      <p><a href="musiqueromans.php">Romans</a></p>
+      <p><a href="livreromans.php">Romans</a></p>
     </div>
     <div class="col-sm-8 text-left"> 
       <h1>Livre</h1>
@@ -149,11 +149,11 @@
   
     echo ' <div class="col-sm-4">
       
-        <div class="panel-heading">Vente flash</div>
-        <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
+        
         
         <!--prix etc-->
         <div class="panel panel-default text-center">
+        <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
         <p class="h4" style="font-weight: bold;">'.$titre.';</p>
         <p><input type="text" class="form-control" id="auteur" value="Auteur : '.$auteur.'"readonly> </p>
         <p><input type="text" class="form-control" id="editeur" value="Editeur : '.$editeur.'"readonly> </p>

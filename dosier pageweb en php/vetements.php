@@ -152,11 +152,11 @@
   
     echo ' <div class="col-sm-4">
       
-        <div class="panel-heading">Vente flash</div>
-        <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
-        
+     
         <!--prix etc-->
         <div class="panel panel-default text-center">
+          <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
+        
         <p class="h4" style="font-weight: bold;">'.$marque.';</p>
         <p><input type="text" class="form-control" id="taille" value="Taille : '.$taille.'"readonly> </p>
         <p><input type="text" class="form-control" id="couleur" value="Couleur : '.$couleur.'"readonly> </p>
