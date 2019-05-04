@@ -23,7 +23,7 @@ session_start();
       $genre= $_POST['genre'];
 
   if($db_found){
-       $sql ="INSERT INTO livre (`id`, `titre`, `auteur`,`date`, `editeur`, `prix`, `photo`, `description`, `categorie`, `genre`, `id_vendeur`) VALUES (NULL,'$titre', '$auteur','$date','$editeur','$prix',NULL,'$description',NULL,$genre,'$id');";
+       $sql ="INSERT INTO livre (`id`, `titre`, `auteur`,`date`, `editeur`, `prix`, `photo`, `description`, `categorie`, `genre`, `id_vendeur`) VALUES (NULL,'$titre', '$auteur','$date','$editeur','$prix',NULL,'$description',NULL,'$genre','$id');";
        echo $sql;
     $result = mysqli_query($db_handle, $sql);
     }
