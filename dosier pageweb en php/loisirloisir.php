@@ -64,7 +64,7 @@
         ?>
 
         <li><a href="disconnect.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-         <li><a href="moncompte.html"> Mon compte</a></li>
+         <li><a href="moncompte.php"> Mon compte</a></li>
 
       </ul>
     </div>

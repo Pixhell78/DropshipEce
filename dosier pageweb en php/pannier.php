@@ -107,8 +107,15 @@
         <a href="#" class="logo">Ece Amazone</a>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="pageprincipale.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                <?php
+            session_start();
+            echo '<li><a style="color: #f1f1f1; display:inline-block; "><strong>Bonjour '.$_SESSION['prenom'].'</strong></a></li>';
+
+        ?>
+
+        <li><a href="disconnect.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
          <li><a href="moncompte.php"> Mon compte</a></li>
+
       </ul>
     </div>
   </div>
