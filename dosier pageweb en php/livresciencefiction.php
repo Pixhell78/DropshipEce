@@ -64,7 +64,7 @@
         ?>
 
         <li><a href="disconnect.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-         <li><a href="moncompte.html"> Mon compte</a></li>
+         <li><a href="moncompte.php"> Mon compte</a></li>
 
       </ul>
     </div>
@@ -103,7 +103,7 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <p><a href="musiqueromans.php">Romans</a></p>
+      <p><a href="livreromans.php">Romans</a></p>
     </div>
     <div class="col-sm-8 text-left"> 
       <h1>Livre</h1>

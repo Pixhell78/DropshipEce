@@ -177,9 +177,7 @@
 <!--musique vente flash-->
 <!--php-->
       <?php
-  define('DB_SERVER','localhost');
-  define('DB_USER', 'root');
-  define('DB_PASS','');
+
   $database ="projet";
   $db_handle = mysqli_connect(DB_SERVER,DB_USER,DB_PASS);
   $db_found = mysqli_select_db($db_handle, $database);
@@ -221,7 +219,7 @@
           
         </div>';
             }
-         
+         }
           else{
             echo "Database not found";
           }    
@@ -232,45 +230,43 @@
 <!--sport et loisir vente flash -->
 <!--php-->
       <?php
-  define('DB_SERVER','localhost');
-  define('DB_USER', 'root');
-  define('DB_PASS','');
+
   $database ="projet";
   $db_handle = mysqli_connect(DB_SERVER,DB_USER,DB_PASS);
   $db_found = mysqli_select_db($db_handle, $database);
     
   
-  if($db_found){
+    if($db_found){
  
-        $sql_count = mysqli_query($db_handle,"SELECT COUNT(*) AS titre FROM sportloisir WHERE categorie='venteflash'") or exit(mysql_error());
+        $sql_count = mysqli_query($db_handle,"SELECT COUNT(*) AS titre FROM sportloisir WHERE genre='loisir'") or exit(mysql_error());
       $donnees = mysqli_fetch_array($sql_count);
       $num = $donnees['titre'];
  
      
     for($i=1;$i<=$num;$i++) {
       
-        $sql = "SELECT * FROM sportloisir WHERE categorie='venteflash' AND id=$i" ;
+        $sql = "SELECT * FROM sportloisir WHERE genre='loisir' AND id=$i" ;
         $result = mysqli_query($db_handle,$sql);
         while ($data = mysqli_fetch_assoc($result))
             {
       $image = $data['photo'];
       $titre = $data['nom'];
       $video = $data['video'];
-      $marque = $marque['marque'];
+      $marque = $data['marque'];
       $prix = $data['prix'];
       $stock = $data['stock'];
       $description = $data['description'];
-}
+
   }
   
     echo ' <div class="col-sm-4">
       
         <div class="panel-heading">Vente flash</div>
-        <div class="panel-body"><img src="'.$image. '" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
         
         <!--prix etc-->
         <div class="panel panel-default text-center">
-        <p class="h4" style="font-weight: bold;">'.$titre.';</p>
+        <p class="h4" style="font-weight: bold;">'.$titre.'"</p>
         <p><input type="text" class="form-control" id="marque" value="Marque : '.$marque.'"readonly> </p>
         <p><input type="text" class="form-control" id="video" value="Regarde ça ! '.$video.'"readonly> </p>
         <p><input type="text" class="form-control" id="description" value="Description :  '.$description.'"readonly> </p>
@@ -281,7 +277,7 @@
       
     </div>';
             }
-         
+         }
           else{
             echo "Database not found";
           }    
@@ -292,15 +288,13 @@
 <!-- ventement vente flash -->
 <!--php-->
       <?php
-  define('DB_SERVER','localhost');
-  define('DB_USER', 'root');
-  define('DB_PASS','');
+
   $database ="projet";
   $db_handle = mysqli_connect(DB_SERVER,DB_USER,DB_PASS);
   $db_found = mysqli_select_db($db_handle, $database);
     
   
-  if($db_found){
+   if($db_found){
  
         $sql_count = mysqli_query($db_handle,"SELECT COUNT(*) AS titre FROM vetement WHERE categorie='venteflash'") or exit(mysql_error());
       $donnees = mysqli_fetch_array($sql_count);
@@ -322,13 +316,13 @@
       $description = $data['description'];
 
 
-        }
+        
   }
   
     echo ' <div class="col-sm-4">
       
         <div class="panel-heading">Vente flash</div>
-        <div class="panel-body"><img src="'.$image. '" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src="'.$image. '?>" class="img-responsive" style="width:100%" alt="Image"></div>
         
         <!--prix etc-->
         <div class="panel panel-default text-center">
@@ -343,7 +337,7 @@
       
     </div>';
             }
-         
+         }
           else{
             echo "Database not found";
           }    

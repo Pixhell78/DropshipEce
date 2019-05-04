@@ -127,14 +127,14 @@
   
   if($db_found){
  
-        $sql_count = mysqli_query($db_handle,"SELECT COUNT(*) AS titre FROM vetement WHERE gnere='enfant'") or exit(mysql_error());
+        $sql_count = mysqli_query($db_handle,"SELECT COUNT(*) AS titre FROM vetement WHERE genre='enfant'") or exit(mysql_error());
       $donnees = mysqli_fetch_array($sql_count);
       $num = $donnees['titre'];
  
      
     for($i=1;$i<=$num;$i++) {
       
-        $sql = "SELECT * FROM vetement WHERE gnere='enfant' AND id=$i" ;
+        $sql = "SELECT * FROM vetement WHERE genre='enfant' AND id=$i" ;
         $result = mysqli_query($db_handle,$sql);
         while ($data = mysqli_fetch_assoc($result))
             {
